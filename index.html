@@ -1,48 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Atlastek LLC">
-  <meta name="keywords" content="blockchain, aiops">
-  <meta name="author" content="Atlastek LLC">
-  <meta name="robots" content="index, follow">
-  
-  <meta name="msvalidate.01" content="4A293152FDB96E0666BA0E5311818EAC" />
-  
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-  
-  <title>Atlastek</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atlastek LLC">
+    <meta name="keywords" content="ai, blockchain, uav, iot, aiops, mlops">
+    <meta name="author" content="Atlastek LLC">
+    <meta name="robots" content="index, follow">
 
-  <!-- Google Font ekleme -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" href="favicon.ico">
-  
+    <meta name="msvalidate.01" content="4A293152FDB96E0666BA0E5311818EAC" />
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <title>Atlastek Developments</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
 </head>
-<body>
-  <header>
-    <!-- Logo görselini buraya ekleyebilirsiniz -->
-    <img src="img/logo.png" alt="Logo" />
-    Atlastek
-  </header>
 
-  <section>
-    <h2>Merhaba</h2>
-    <p>
-      Yakında buradayız!
-    </p>
-  </section>
+<body id="top">
+    <!-- Enhanced Background Elements -->
+    <div class="cyber-bg">
+        <div class="cyber-gradient"></div>
+        <div class="matrix-rain" id="matrixRain"></div>
+    </div>
 
-  <footer>
-    &copy; 2025 Atlastek. Tüm hakları saklıdır.
-  </footer>
+    <div class="particles" id="particlesContainer"></div>
+    <div class="data-streams" id="dataStreams"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <div class="grid-overlay">
+        <div class="grid-lines"></div>
+        <div class="grid-glow"></div>
+    </div>
+
+    <div class="scanlines"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#top" class="logo">Atlastek</a>
+            <ul class="nav-links">
+                <li><a href="#features">Systems</a></li>
+                <li><a href="#pricing">Services</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-bottom">
+                <a href="#" class="cyber-button">Sign In</a>
+            </div>
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#top" class="mobile-menu-logo">Atlastek Developments</a>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        <div class="mobile-menu-cta">
+            <a href="#" class="cyber-button">Sign In</a>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="#features">Systems</a></li>
+                <li><a href="#pricing">Services</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                <span class="hero-nexus">Atlastek</span><span class="hero-flow">Developments</span>
+            </h1>
+            <p class="hero-subtitle">produces Blockchain and AI-based technology products for technologies such as UAV or IoT</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Review System</a>
+                <a href="#" class="btn-secondary">View Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats fade-up" id="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">124</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.8%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100M+</span>
+                    <span class="stat-label">Sensor data processed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features fade-up" id="features">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">Core Systems</h2>
+                <p class="section-subtitle">focusing on energy efficiency, security and scalable performance</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Energy</h3>
+                    <p>Integrating AI-based blockchain with next‑generation energy systems, including nuclear technologies, to enable secure, efficient and sustainable power solutions</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔮</div>
+                    <h3>AI</h3>
+                    <p>Atlastek AI powerful AI for UAV and IoT, designed to optimize infrastructure with AIOps/MLOps-ready architecture</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Blockchain</h3>
+                    <p>Securing energy infrastructures with tamper‑proof, distributed ledger technology, ensuring trust, transparency and resilience for UAV and IoT ecosystems</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>SecOps</h3>
+                    <p>Integrating security operations across AI, blockchain and energy infrastructures, ensuring real‑time threat detection, compliance and resilience for UAV and IoT technologies</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>DevOps</h3>
+                    <p>Enabling continuous integration and delivery for AI‑based and blockchain‑powered systems, with automated pipelines and scalable infrastructure for UAV and IoT technologies</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>AIOps</h3>
+                    <p>Applying AI‑driven analytics and automation to monitor, optimize and self‑heal UAV and IoT infrastructures, ensuring resilient and scalable operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing fade-up" id="pricing">
+        <div class="pricing-container">
+            <div class="section-header">
+                <h2 class="section-title">Platform</h2>
+                <p class="section-subtitle">Choose your platform</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">SaaS</div>
+                    <div class="plan-price">Atlastek AI</div>
+                    <div class="plan-period">AI Solutins</div>
+                    <ul class="plan-features">
+                        <li>AI-based platform</li>
+                        <li>LLM</li>
+                        <li>Training</li>
+                        <li>CUDA support</li>
+                        <li>Blockchain support</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Select</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="plan-name">PaaS</div>
+                    <div class="plan-price">Goosey Blockchain</div>
+                    <div class="plan-period">Blockchain Solutions</div>
+                    <ul class="plan-features">
+                        <li>Go support</li>
+                        <li>Rust support</li>
+                        <li>included Atlastek AI</li>
+                        <li>Decentralized</li>
+                        <li>Immutable</li>
+                        <li>Secure IoT communication</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Select</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">IaaS</div>
+                    <div class="plan-price">Atlastek Infra</div>
+                    <div class="plan-period">Core Systems</div>
+                    <ul class="plan-features">
+                        <li>included Atlastek AI</li>
+                        <li>included Goosey Blockchain</li>
+                        <li>Secure</li>
+                        <li>DC/OS Kubernetes support</li>
+                        <li>Docker support</li>
+                        <li>Secure Network enabled</li>
+                    </ul>
+                    <a href="#" class="btn-secondary">Select</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact fade-up" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">If you’re interested or want to learn more, feel free to reach out to us! We’re always excited to connect and explore new possibilities together</p>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name Surname</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your information" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="hello@atlastek.dev" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Compose your message.." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-submit">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Company</a>
+                <span class="footer-separator">•</span>
+                <a href="#">Team</a>
+                <span class="footer-separator">•</span>
+                <a href="#">Jobs</a>
+                <span class="footer-separator">•</span>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Atlastek Developments. All realities reserved.</p>
+                <p class="footer-credit">Designed by <a href="https://adrichal.org" target="_blank" rel="noopener nofollow">Adrichal.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
