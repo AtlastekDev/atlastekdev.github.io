@@ -14,7 +14,7 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
 
-    <title>Atlastek - Company</title>
+    <title>Atlastek - Login</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -53,60 +53,27 @@
         </div>
     </nav>
 
-    <!-- Company Section -->
-     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <h1 class="hero-title">
-                <span class="hero-nexus">About</span><span class="hero-flow">Us</span>
-            </h1>
-            <p class="hero-subtitle">
-               Atlastek Developments was founded under Goosey Inc., and the company delivers advanced AI solutions through its flagship product. Atlastek AI, efficiently processing UAV and IoT data with Blockchain integration, ensures secure and reliable data management.
-</p>
-        </div>
-    </section>
+   <section class="login-section">
+    <div class="login-container">
+        <h2 class="section-title">Login</h2>
+        <p class="section-subtitle">Enter your username and password</p>
 
-    <section class="legal-section">
-    <div class="legal-container">
-        <h2 class="section-title">Patents & Copyrights</h2>
-        <p class="section-subtitle">
-            Our innovations and brand identity are officially protected by national authorities.
-        </p>
-        <div class="legal-cards">
-            <!-- Telif Hakkı Kartı -->
-            <div class="legal-card">
-                <img src="img/telif.png" alt="Copyright Code" class="legal-icon" />
-                <h3>Atlastek AI</h3>
-                <p>
-                    Atlastek AI product is protected by the 
-                    General Directorate of Copyright with decision number 
-                    <strong>2025/13558</strong>
-                </p>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
             </div>
-            <!-- Marka Tescili Kartı -->
-            <div class="legal-card">
-                <img src="img/patent.png" alt="Patent Code" class="legal-icon" />
-                <h3>Trademark</h3>
-                <p>
-                    Atlastek brand officially registered and protected 
-                    by the Turkish Patent and Trademark Office under decision number 
-                    <strong>2025/055090</strong>
-                </p>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
             </div>
-            <div class="legal-card">
-                <h3>Atlastek Yazılım Limited Şirketi</h3>
-                <p>
-                    Başakşehir Vergi Dairesi
-                    <strong>1021026862</strong>
-                </p>
-                <br>
-               <p>
-    <a href="mailto:hello@atlastek.dev"><strong>hello@atlastek.dev</strong></a>
-</p>
-            </div>
-        </div>
+
+            <button type="submit" class="btn-primary">Login</button>
+        </form>
     </div>
 </section>
+
      <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

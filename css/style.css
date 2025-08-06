@@ -43,6 +43,46 @@ https://adrichal.org
     text-align: center; /* Alt başlık ve genel metin için */
 }
 
+.login-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #111;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.login-form button.btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
 .legal-container {
     max-width: 900px;
     margin: 0 auto;
