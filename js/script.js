@@ -429,44 +429,56 @@ https://adrichal.org
         document.head.appendChild(style);
 
         // Contact form submission
-        document.querySelector('.btn-submit').addEventListener('click', function (e) {
-    e.preventDefault();
+       document.addEventListener('DOMContentLoaded', function () {
+    const submitBtn = document.querySelector('.btn-submit');
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    if (name && email && message) {
-        this.textContent = 'SENDING...';
-        this.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-        fetch('https://formsubmit.co/ajax/hello@atlastek.dev', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                message: message,
-                _captcha: false
+        if (name && email && message) {
+            // Animasyon başlat
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
+
+            // FormSubmit AJAX çağrısı
+            fetch("https://formsubmit.co/ajax/hello@atlastek.dev", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message,
+                    _captcha: false
+                })
             })
-        })
-        .then(response => response.json())
-        .then(data => {
-            this.textContent = 'MESSAGE SEND COMPLETE';
-            this.style.background = 'var(--primary-cyan)';
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.textContent = 'MESSAGE SEND COMPLETE';
+                submitBtn.style.background = 'var(--primary-cyan)';
 
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('message').value = '';
+                // Formu temizle
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
 
-            setTimeout(() => {
-                this.textContent = 'Transmit Message';
-                this.style.background = '';
-            }, 3000);
-        })
-        .catch(error => {
-            this.textContent = 'ERROR!';
-            this.style.background = 'red';
-        });
-    }
+                // 3 sn sonra butonu resetle
+                setTimeout(() => {
+                    submitBtn.textContent = 'Transmit Message';
+                    submitBtn.style.background = '';
+                }, 3000);
+            })
+            .catch(error => {
+                submitBtn.textContent = 'ERROR!';
+                submitBtn.style.background = 'red';
+            });
+        }
+    });
 });
+
