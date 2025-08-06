@@ -429,32 +429,44 @@ https://adrichal.org
         document.head.appendChild(style);
 
         // Contact form submission
-        document.querySelector('.btn-submit').addEventListener('click', function(e) {
-            e.preventDefault();
+        document.querySelector('.btn-submit').addEventListener('click', function (e) {
+    e.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
-            if (name && email && message) {
-                // Simulate form submission
-                this.textContent = 'SENDING...';
-                this.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
+    if (name && email && message) {
+        this.textContent = 'SENDING...';
+        this.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
 
-                setTimeout(() => {
-                    this.textContent = 'MESSAGE SEND COMPLETE';
-                    this.style.background = 'var(--primary-cyan)';
+        fetch('https://formsubmit.co/ajax/hello@atlastek.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message,
+                _captcha: false
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            this.textContent = 'MESSAGE SEND COMPLETE';
+            this.style.background = 'var(--primary-cyan)';
 
-                    // Clear form
-                    document.getElementById('name').value = '';
-                    document.getElementById('email').value = '';
-                    document.getElementById('message').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
 
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        this.textContent = 'Transmit Message';
-                        this.style.background = '';
-                    }, 3000);
-                }, 2000);
-            }
+            setTimeout(() => {
+                this.textContent = 'Transmit Message';
+                this.style.background = '';
+            }, 3000);
+        })
+        .catch(error => {
+            this.textContent = 'ERROR!';
+            this.style.background = 'red';
         });
+    }
+});
