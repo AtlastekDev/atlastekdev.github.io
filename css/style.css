@@ -37,6 +37,63 @@ https://adrichal.org
             overflow-x: hidden;
         }
 
+        .legal-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center; /* Alt başlık ve genel metin için */
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Container içeriğini yatayda ortalar */
+}
+
+.legal-cards {
+    display: flex;
+    justify-content: center; /* Kartları yatayda ortala */
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    width: 100%; /* Container genişliği kadar yayıl */
+    max-width: 700px; /* Maksimum genişlik */
+}
+
+.legal-card {
+    background: #fff; /* Beyaz arka plan */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    width: 280px;
+    text-align: center;
+}
+
+.legal-card h3 {
+    color: #111;   /* Başlık için koyu siyah */
+    margin-bottom: 8px;
+}
+
+.legal-card p {
+    color: #333;   /* Paragraf için koyu gri */
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.legal-icon {
+    width: 48px;
+    margin-bottom: 12px;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 14px;
+    display: inline-block; /* Link buton şeklinde düzgün görünür */
+}
+
         /* Enhanced Cyberpunk Background */
         .cyber-bg {
             position: fixed;
