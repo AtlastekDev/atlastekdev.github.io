@@ -432,53 +432,48 @@ https://adrichal.org
        document.addEventListener('DOMContentLoaded', function () {
     const submitBtn = document.querySelector('.btn-submit');
 
-    submitBtn.addEventListener('click', function (e) {
-        e.preventDefault();
+    submitBtn.addEventListener('click', function () {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        if (!name || !email || !message) return;
 
-        if (name && email && message) {
-            // Animasyon başlat
-            submitBtn.textContent = 'SENDING...';
-            submitBtn.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
+        // Animasyon başlat
+        submitBtn.textContent = 'SENDING...';
+        submitBtn.style.background = 'linear-gradient(135deg, var(--primary-cyan), var(--primary-pink))';
 
-            // FormSubmit AJAX çağrısı
-            fetch("https://formsubmit.co/ajax/hello@atlastek.dev", {
-                method: "POST",
-                headers: { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    message: message,
-                    _captcha: false
-                })
+        // FormSubmit AJAX
+        fetch("https://formsubmit.co/ajax/hello@atlastek.dev", {
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: message,
+                _captcha: false
             })
-            .then(response => response.json())
-            .then(data => {
-                submitBtn.textContent = 'MESSAGE SEND COMPLETE';
-                submitBtn.style.background = 'var(--primary-cyan)';
+        })
+        .then(res => res.json())
+        .then(data => {
+            submitBtn.textContent = 'MESSAGE SEND COMPLETE';
+            submitBtn.style.background = 'var(--primary-cyan)';
 
-                // Formu temizle
-                document.getElementById('name').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('message').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
 
-                // 3 sn sonra butonu resetle
-                setTimeout(() => {
-                    submitBtn.textContent = 'Transmit Message';
-                    submitBtn.style.background = '';
-                }, 3000);
-            })
-            .catch(error => {
-                submitBtn.textContent = 'ERROR!';
-                submitBtn.style.background = 'red';
-            });
-        }
+            setTimeout(() => {
+                submitBtn.textContent = 'Send Message';
+                submitBtn.style.background = '';
+            }, 3000);
+        })
+        .catch(err => {
+            submitBtn.textContent = 'ERROR!';
+            submitBtn.style.background = 'red';
+        });
     });
 });
-

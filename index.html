@@ -249,15 +249,7 @@
         </div>
 
         <div class="contact-form-wrapper">
-            <!-- FormSubmit -->
-            <form action="https://formsubmit.co/hello@atlastek.dev" method="POST" class="contact-form">
-                <!-- (honeypot) -->
-                <input type="hidden" name="_honey" style="display:none">
-                <!-- Captcha -->
-                <input type="hidden" name="_captcha" value="false">
-                <!-- Forward -->
-                <input type="hidden" name="_next" value="https://atlastek.dev/thanks.html">
-
+            <form class="contact-form">
                 <div class="form-group">
                     <label for="name">Name Surname</label>
                     <input type="text" id="name" name="name" placeholder="Enter your information" required>
@@ -273,11 +265,12 @@
                     <textarea id="message" name="message" rows="5" placeholder="Compose your message.." required></textarea>
                 </div>
 
-                <button type="submit" class="btn-primary btn-submit">Send Message</button>
+                <button type="button" class="btn-primary btn-submit">Send Message</button>
             </form>
         </div>
     </div>
 </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
