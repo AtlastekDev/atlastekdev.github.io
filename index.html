@@ -59,8 +59,11 @@
                 <li><a href="https://git.atlastek.dev">GIT</a></li>
             </ul>
             <div class="nav-bottom">
-                <a href="#" class="cyber-button">Sign In</a>
-            </div>
+    <a href="mailto:hello@atlastek.dev" class="cyber-button email-button">
+        hello@atlastek.dev
+    </a>
+    <a href="#" class="cyber-button">Sign In</a>
+</div>
             <button class="mobile-menu-button" id="mobileMenuBtn">
                 <div class="hamburger">
                     <span></span>
@@ -235,36 +238,46 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact fade-up" id="contact">
-        <div class="contact-container">
-            <div class="section-header">
-                <h2 class="section-title">Contact</h2>
-                <p class="section-subtitle">If you’re interested or want to learn more, feel free to reach out to us! We’re always excited to connect and explore new possibilities together</p>
-            </div>
-
-            <div class="contact-form-wrapper">
-                <div class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name Surname</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your information" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="hello@atlastek.dev" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Compose your message.." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary btn-submit">Send Message</button>
-                </div>
-            </div>
+   <section class="contact fade-up" id="contact">
+    <div class="contact-container">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">
+                If you’re interested or want to learn more, feel free to reach out to us! 
+                We’re always excited to connect and explore new possibilities together
+            </p>
         </div>
-    </section>
 
+        <div class="contact-form-wrapper">
+            <!-- FormSubmit entegrasyonu -->
+            <form action="https://formsubmit.co/hello@atlastek.dev" method="POST" class="contact-form">
+                <!-- Spam önleme (honeypot) -->
+                <input type="hidden" name="_honey" style="display:none">
+                <!-- Captcha kapatma -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Gönderim sonrası yönlendirme -->
+                <input type="hidden" name="_next" value="https://atlastek.dev/thanks.html">
+
+                <div class="form-group">
+                    <label for="name">Name Surname</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your information" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="hello@atlastek.dev" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Compose your message.." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
